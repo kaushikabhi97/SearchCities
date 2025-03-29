@@ -35,7 +35,6 @@ A React-based search table that allows users to search for cities, display resul
 - React.js
 - Axios (for API calls)
 - CSS (for styling, fully responsive)
-- Vite (for fast development and build setup)
 
 
 
