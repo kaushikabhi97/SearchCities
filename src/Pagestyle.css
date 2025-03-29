@@ -1,0 +1,188 @@
+* {
+  font-size: 16px;
+  color: rgb(33, 37, 41);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Main Container */
+.searchTable-Container {
+  padding: 10px 5%;
+  max-width: 1240px;
+  margin: auto;
+}
+
+/* Search Box */
+.searchTable-Container .inputbox {
+  width: 100%;
+  max-width: 300px;
+  height: 35px;
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(206, 212, 218);
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+
+/* Action Button */
+.searchTable-Container .actionbtn {
+  outline: none;
+  border-radius: 8px;
+  background-color: #000fff;
+  color: #fff;
+  padding: 14px 12px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Table Container */
+.city-table-container {
+  width: 100%;
+  margin: 10px auto;
+  position: relative;
+  overflow-x: auto; 
+}
+
+
+/*------------- Table Styling-------------- */
+.city-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+.loader {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  font-weight: bold;
+  opacity: 1;
+  z-index: 1;
+  height: 100%;
+  border-radius: 5px;
+}
+
+
+.city-table th,
+.city-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* Table Header */
+.city-table th {
+  background-color: rgb(222, 226, 230);
+  font-weight: 700;
+  padding: 10px;
+}
+
+.total-pages {
+  text-align: end;
+}
+
+/* Disabled State */
+.disabled {
+  pointer-events: none;
+  cursor: none;
+  opacity: 0.5;
+}
+
+/*-------------------- Pagination Style---------------- */
+.pagination-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  width: 100%;
+  gap: 10px;
+}
+
+/* Pagination Buttons */
+.pagination-container button {
+  margin: 0px 5px;
+  background-color: grey;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.limit-input {
+  width: 60px;
+  min-width: 40px;
+}
+
+.warning {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/*-------------- Responsive Design------------- */
+@media (max-width: 768px) {
+  .searchTable-Container {
+    padding: 10px;
+    text-align: center;
+  }
+  .searchTable-Container .inputbox{
+    height: 20px;
+
+  }
+
+  .city-table {
+    font-size: 14px;
+  }
+
+  .city-table th, 
+  .city-table td {
+    padding: 6px;
+  }
+
+  .pagination-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .limit-input {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchTable-Container .inputbox {
+    width: 100%;
+    max-width: 200px;
+    height: 20px;
+  }
+  
+
+  .actionbtn {
+    width: 100%;
+    max-width: 120px;
+    margin-top: 5px;
+    padding: 5px;
+
+  }
+
+  .pagination-container {
+    flex-direction: column;
+  }
+
+  .pagination-container button {
+    width: 50px;
+    font-size: 12px;
+  }
+
+  .limit-input {
+    width: 40px;
+  }
+}
