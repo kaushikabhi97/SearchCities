@@ -155,6 +155,9 @@
   .limit-input {
     width: 50px;
   }
+  .searchTable-Container .actionbtn{
+    padding: 8px;
+  }
 }
 
 @media (max-width: 480px) {
